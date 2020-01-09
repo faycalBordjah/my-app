@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import MessageBar from "./MessageBar";
 import MessageList from "./MessageList";
-import Test from "./test";
+import {useSelector} from "react-redux";
 
 const chatStyle = {
     borderRadius: 10,
@@ -19,6 +19,8 @@ function Chat() {
         ['']
     );
 
+    const msgs = useSelector(state => state.chat.messages);
+
     const handleInputMessage = (msg) => {
         setMessages(messages.concat([msg]))
     };
@@ -26,7 +28,6 @@ function Chat() {
     return <div style={chatStyle}> <h1>Chat</h1><br/>
     <MessageList messages={messages}/>
     <MessageBar handleInputMessage={handleInputMessage}/>
-    <Test msg={greeting}/>
     </div>;
 }
 
