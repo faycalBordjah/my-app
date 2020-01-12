@@ -11,24 +11,6 @@ const chatStyle = {
     display: "flex",
     flexDirection: "column"
 };
-/*function Chat() {
-    const greeting = "Hello world";
-    const [messages, setMessages] = useState(
-        ['']
-    );
-
-    const msgs = useSelector(state => state.chat.messages);
-
-    const handleInputMessage = (msg) => {
-        setMessages(messages.concat([msg]))
-    };
-
-    return <div style={chatStyle}> <h1>Chat</h1><br/>
-    <MessageList messages={messages}/>
-    <MessageBar handleInputMessage={handleInputMessage}/>
-    </div>;
-}*/
-
 const Chat = () => {
     return <div className='root-container' style={chatStyle}>
         <MessageList />

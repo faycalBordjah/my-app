@@ -24,7 +24,7 @@ const Home = () => {
     );
 };
 
-const NavBar = (props) => {
+const NavBar = () => {
     return (
         <nav>
             <ul className="navbar">
@@ -37,7 +37,7 @@ const NavBar = (props) => {
             </ul>
         </nav>
     );
-}
+};
 
 function App() {
     return (
