@@ -3,9 +3,8 @@ import MessageItem from "./MessageItem";
 
 
 const MessageList = ({messages}) => {
-    return <div>
-            <li>
-                {messages.map((msg, i) => <MessageItem message={msg} key={i}/>)}
+    return <div className='messages-container'>
+            <li><MessageItem messages={messages.map(msg => messages.concat(msg))}/>
             </li>
     </div>
 };

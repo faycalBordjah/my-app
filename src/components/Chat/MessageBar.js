@@ -33,11 +33,7 @@ const MessageBar = (props) => {
     return <form onSubmit={handleSubmit}>
         <h1>Hello</h1>
         <p>Enter your message:</p>
-        <input
-            type="text"
-            onChange={handleMessage}
-            value={input}
-        />
+        <input type="text" onChange={handleMessage} value={input}  placeholder="Type message" />
         <Button type="submit" value="Send">
             Send
         </Button>

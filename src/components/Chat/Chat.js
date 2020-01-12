@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import MessageBar from "./MessageBar";
 import MessageList from "./MessageList";
-import {useSelector} from "react-redux";
 
 const chatStyle = {
     borderRadius: 10,
@@ -12,8 +11,7 @@ const chatStyle = {
     display: "flex",
     flexDirection: "column"
 };
-
-function Chat() {
+/*function Chat() {
     const greeting = "Hello world";
     const [messages, setMessages] = useState(
         ['']
@@ -29,6 +27,13 @@ function Chat() {
     <MessageList messages={messages}/>
     <MessageBar handleInputMessage={handleInputMessage}/>
     </div>;
-}
+}*/
+
+const Chat = () => {
+    return <div className='root-container' style={chatStyle}>
+        <MessageList />
+        <MessageBar />
+    </div>
+};
 
 export default Chat;
